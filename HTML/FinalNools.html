@@ -39,28 +39,29 @@ html,body { width: 100%; height: 100%; margin: 0px; padding: 0px; }
 
 <body>
 
-<div id="container" style="display: table; width:700; height:600px; border: 1px solid black; border-spacing: 2px;">
+<div id="container" style="display: table; width:900px; height:600px;">
     <div style="display: table-row; height:100%;">
         <div class="subproblem">
-            <div style="padding-bottom: 1em;">list a = [<div id="givena0" class="CTATTextField"></div>, <div id="givena1" class="CTATTextField"></div>, <div id="givena2" class="CTATTextField"></div>]</div>
-            <div style="padding-bottom: 1em;">list b = <div id="givenb" class="CTATTextField"></div></div>
-            <div style="padding-bottom: 1em;"><div id="test" class="CTATTextField"></div></div>
-            <div style="padding-bottom: 1em;">Now, fill in the new values: </div>
+            <div style="padding-bottom: 1em;">The below three lines of code show an example of list a (assigned in line 1) being modified.</div>
+            <div style="padding-bottom: 1em;">(1) a = [<div id="givena0" class="CTATTextField"></div>, <div id="givena1" class="CTATTextField"></div>, <div id="givena2" class="CTATTextField"></div>]</div>
+            <div style="padding-bottom: 1em;">(2) b = <div id="givenb" class="CTATTextField"></div></div>
+            <div style="padding-bottom: 1em;">(3) <div id="codeline" class="CTATTextField"></div></div>
+            <div style="padding-bottom: 1em;">Now, fill in the new values of both lists: </div>
             <div id="sub-problem1" class="CTATGroupingComponent greybox">
                 <table border="0">
                     <tr>
                         <td align="left">a=</td>
                         <td width="20">&nbsp;</td>
-                        <td><div id="firstPart" class="CTATTextInput"></div></td>
-                        <td><div id="firstPart2" class="CTATTextInput"></div></td>
-                        <td><div id="firstPart3" class="CTATTextInput"></div></td>
+                        <td><div id="newa0" class="CTATTextInput"></div></td>
+                        <td><div id="newa1" class="CTATTextInput"></div></td>
+                        <td><div id="newa2" class="CTATTextInput"></div></td>
                     </tr>
                     <tr>
                         <td align="left">b=</td>
                         <td width="20">&nbsp;</td>
-                        <td><div id="firstPartPlusOne" class="CTATTextInput"></div></td>
-                        <td><div id="firstPartPlusOne2" class="CTATTextInput"></div></td>
-                        <td><div id="firstPartPlusOne3" class="CTATTextInput"></div></td>
+                        <td><div id="newb0" class="CTATTextInput"></div></td>
+                        <td><div id="newb1" class="CTATTextInput"></div></td>
+                        <td><div id="newb2" class="CTATTextInput"></div></td>
                     </tr>
                 </table>
             </div>
@@ -78,26 +79,6 @@ html,body { width: 100%; height: 100%; margin: 0px; padding: 0px; }
       <div id="hint" class="CTATHintButton" tabindex="10" style=""></div>
     </div>
   </div>
-<!--
-    <div style="display: table-row; height: 200px;">
-        <div style="width: 49%; display: inline-block; border: 1px solid black;">
-          <div style="display: table-cell; width: 100%; vertical-align: bottom;">
-            <div id="HintWindow" class="CTATHintWindow" style="width: 100%; height: 100%"></div>    
-          </div>
-          <div style="display: table-cell; width: 60px;">
-            <div style="border: 0px solid black; margin-bottom: 2px;">
-                <div id="hint-button" class="CTATHintButton"></div>
-            </div>
-            <div style="border: 0px solid black;">
-                <div id="done" class="CTATDoneButton"></div>    
-            </div>
-          </div>
-        </div>
-        <div style="display: inline-block; width: 49%; vertical-align: bottom; border: 1px solid black">
-            <div id="skills" class="CTATSkillWindow" style="width: 100%"></div>
-        </div>
-    </div> 
--->
 </div>
 
 </body>

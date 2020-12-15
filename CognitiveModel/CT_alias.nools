@@ -1,0 +1,10 @@
+global lista0 = "[1]";
+global lista1 = "[2]";
+global lista2 = "[3]";
+global listb = "a";
+global listbtype = "alias";
+global nline = 'a[2][0] equals 4';
+global ind = 2;
+global newval = "[4]";
+
+import("productionrules.nools");

@@ -1,0 +1,10 @@
+global lista0 = "[123]";
+global lista1 = "[4]";
+global lista2 = '"aliasing!"';
+global listb = "a[:]";
+global listbtype = "shallow";
+global nline = 'a[0] plusequals [5]';
+global ind = 0;
+global newval = "[123, 5]";
+
+import("productionrules.nools");

@@ -22,15 +22,23 @@ define Problem {
 	listbt: null,
 	ind: null,
 	newval: null,
-	firstPart: null,
-	firstPartPlus1: null,
+	newa0: null,
+	newa1: null,
+	newa2: null,
+	newb0: null,
+	newb1: null,
+	newb2: null,
 	product: null,
 	append25: null,
 	finalAnswer: null,
 	printed: null,
-	ieFirstPart: null,
-	ieFirstPartPlus1: null,
-	constructor: function(name, lista0, lista1, lista2, listbtype, ind, newval, firstPart, firstPartPlus1) {
+	ienewa0: null,
+	ienewa1: null,
+	ienewa2: null,
+	ienewb0: null,
+	ienewb1: null,
+	ienewb2: null,
+	constructor: function(name, lista0, lista1, lista2, listbtype, ind, newval, newa0, newa1, newa2, newb0, newb1, newb2) {
 		this.name = name;
 		this.lista0 = lista0;
 		this.lista1 = lista1;
@@ -38,8 +46,12 @@ define Problem {
 		this.listbt = listbtype;
 		this.ind = ind;
 		this.newval = newval;
-		this.ieFirstPart = firstPart;
-		this.ieFirstPartPlus1 = firstPartPlus1;
+		this.ienewa0 = newa0;
+		this.ienewa1 = newa1;
+		this.ienewa2 = newa2;
+		this.ienewb0 = newb0;
+		this.ienewb1 = newb1;
+		this.ienewb2 = newb2;
 	}
 }
 

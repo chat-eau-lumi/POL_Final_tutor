@@ -1,3 +1,0 @@
-global numberToSquare = 85;
-
-import("productionrules.nools");

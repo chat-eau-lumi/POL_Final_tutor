@@ -2,13 +2,15 @@
 	box-shadow: red;
 }
 
-input[type=radio] {
-	margin-right: 10px !important;
+.column {
+    float: left;
+	width: 50%;
+	border-right:1px solid black;
+	padding: 10px;
 }
 
-div.row table td {
-	width: 50%;
-	padding-bottom: 10px;
+input[type=radio] {
+	margin-right: 10px !important;
 }
 
 div.col-lg-6 {
@@ -31,7 +33,6 @@ div.col-lg-6 {
 
 #step3Line4Part1 {
 	display: none;
-
 }
 
 #step3Line4Part2 {
@@ -40,47 +41,40 @@ div.col-lg-6 {
 
 #step3Line5Part1 {
 	display: none;
-	
 }
 
 #step3Line5Part2 {
 	display: none;
-	
 }
 
 #step3Line6Part1 {
 	display: none;
-	
 }
 
 #step3Line6Part2 {
 	display: none;
-
-	
 }
 
 #step3Line7Part1 {
 	display: none;
-	
 }
 
 #step3Line7Part2 {
 	display: none;
-
 }
 
 #step4 {
-	#display: none;
+	display: none;
 }
 
 #step5 {
-	#display: none;
+	display: none;
 }
 
 #step6 {
-	#display: none;
+	display: none;
 }
 
 .CTATTextInput {
-	#height: 20px;
+	height: 20px;
 }

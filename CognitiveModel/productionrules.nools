@@ -1,11 +1,5 @@
 import("types.nools");
 
-// If the argument is an integer, return it without the ones digit, else return null
-//
-function removeOnesDigit(n) {
-    return (Number.isInteger(n) ? Math.floor(n/10) : null);
-}
-
 // Return true if the 2 arguments are not equal.
 //
 function notEqual(m, n) {
@@ -28,14 +22,22 @@ rule bootstrap {
         let ga1 = assert(new InterfaceElement("givena1"));
         let ga2 = assert(new InterfaceElement("givena2"));
         let gb = assert(new InterfaceElement("givenb"));
-        let cl = assert(new InterfaceElement("test"));
-        let firstPart = assert(new InterfaceElement("firstPart"));
-        let firstPartPlus1 = assert(new InterfaceElement("firstPartPlusOne"));
+        let cl = assert(new InterfaceElement("codeline"));
+        let inewa0 = assert(new InterfaceElement("newa0"));
+        let inewa1 = assert(new InterfaceElement("newa1"));
+        let inewa2 = assert(new InterfaceElement("newa2"));
+        let inewb0 = assert(new InterfaceElement("newb0"));
+        let inewb1 = assert(new InterfaceElement("newb1"));
+        let inewb2 = assert(new InterfaceElement("newb2"));
 
         // create the main Problem fact, with the given numberToSquare and the component names
-        assert(new Problem("problem", lista0, lista1, lista2, listbtype, ind, newval,
-            firstPart.name,
-            firstPartPlus1.name));
+        assert(new Problem("problem"+newval, lista0, lista1, lista2, listbtype, ind, newval,
+            inewa0.name,
+            inewa1.name,
+            inewa2.name,
+            inewb0.name,
+            inewb1.name,
+            inewb2.name));
 
         // write the numberToSquare to the proper student interface component
         assert(new TPA(ga0.name, "UpdateTextField", lista0));
@@ -49,24 +51,24 @@ rule bootstrap {
     }
 }
 
-rule findFirstPart {
+rule findnewa0 {
     when {
-        prob : Problem prob.firstPart == null
-            {lista0: n, ieFirstPart: sel};
+        prob : Problem prob.newa0 == null
+            {lista0: n, ienewa0: sel};
         ie : InterfaceElement ie.name == sel && ie.value == null;
     }
     then {
-            // compute the number with the 5 on the right "chopped off"
-        if (prob.ind == 1) {
-            let f = removeOnesDigit(n);
+        let f = n;
+        if (prob.ind == 0) {
+            f = newval;
         }
             // hints
-        assert(new Hint("Start by removing the right-most digit from "+n+"."));
-        assert(new Hint("If you remove the right-most digit from "+n+", you have "+f+"."));
+        assert(new Hint("Has this element been changed?"));
+        assert(new Hint("Are you changing a list element or appending to a list inside a list?"));
         assert(new Hint("Please write "+f+"."));
             // model observable action
 	      if (checkSAI({selection: sel, action: "UpdateTextField", input: f})) {
-             modify(prob, "firstPart", f);    // modify semantic representation
+             modify(prob, "newa0", f);    // modify semantic representation
 	           modify(ie, "value", f);         // modify interface represention in WM
                                             //(this does not change the interface itself!!)
 	           halt();                 // await next student action
@@ -77,37 +79,181 @@ rule findFirstPart {
     }
 }
 
-// RULE addOne
-// IF
-//    there is a goal to determine the square of a number
-//    and we have split off the first part (call it f)
-//    and we have not added 1 to the first part
-//THEN
-//    Write (f + 1) as the first part plus 1
-
-rule addOne {
-  when {
-    p : Problem p.firstPart != null && p.firstPartPlus1 == null
-	      {firstPart: f, ieFirstPartPlus1: sel};
-    ie : InterfaceElement ie.name==sel && ie.value==null;    
-  }
-  then {
-            // do the actual adding of 1
-    let f1 = f + 1;
-            // hints
-    assert(new Hint("Next step: Add 1."));
-    assert(new Hint("If you add 1 to the previous number, "+f+", you have "+f1+"."));
-    assert(new Hint("Please write "+f1+"."));
-            // model observable action
-    if(checkSAI({selection: sel, action: "UpdateTextField", input: f1})) {
-        modify(p, "firstPartPlus1", f1);      // modify semantic representation
-        modify(ie, "value", f1);              // modify interface represention in WM
-                                            //(this does not change the interface itself!!)
-        halt();                 // await next student action
+rule findnewa1 {
+    when {
+        prob : Problem prob.newa1 == null
+            {lista1: n, ienewa1: sel};
+        ie : InterfaceElement ie.name == sel && ie.value == null;
     }
-    else {
-	     backtrack();             // undo any changes and search further
-	 }
-  }
+    then {
+        let f = n;
+        if (prob.ind == 1) {
+            f = newval;
+        }
+            // hints
+        assert(new Hint("Has this element been changed?"));
+        assert(new Hint("Are you changing a list element or appending to a list inside a list?"));
+        assert(new Hint("Please write "+f+"."));
+            // model observable action
+	      if (checkSAI({selection: sel, action: "UpdateTextField", input: f})) {
+             modify(prob, "newa1", f);    // modify semantic representation
+	           modify(ie, "value", f);         // modify interface represention in WM
+                                            //(this does not change the interface itself!!)
+	           halt();                 // await next student action
+        }
+        else {
+            backtrack();             // undo any changes and search further
+	     }
+    }
 }
 
+rule findnewa2 {
+    when {
+        prob : Problem prob.newa2 == null
+            {lista2: n, ienewa2: sel};
+        ie : InterfaceElement ie.name == sel && ie.value == null;
+    }
+    then {
+        let f = n;
+        if (prob.ind == 2) {
+            f = newval;
+        }
+            // hints
+        assert(new Hint("Has this element been changed?"));
+        assert(new Hint("Are you changing a list element or appending to a list inside a list?"));
+        assert(new Hint("Please write "+f+"."));
+            // model observable action
+	      if (checkSAI({selection: sel, action: "UpdateTextField", input: f})) {
+             modify(prob, "newa2", f);    // modify semantic representation
+	           modify(ie, "value", f);         // modify interface represention in WM
+                                            //(this does not change the interface itself!!)
+	           halt();                 // await next student action
+        }
+        else {
+            backtrack();             // undo any changes and search further
+	     }
+    }
+}
+
+rule listb0 {
+    when {
+        prob : Problem prob.newb0 == null
+            {lista0: n, ienewb0: sel};
+        ie : InterfaceElement ie.name == sel && ie.value == null;
+    }
+    then {
+        let f = n;
+        let z = newval;
+        if (prob.ind == 0) {
+            if (listbtype !== "deepcopy") {
+                f = newval;
+                z = lista0;
+            }
+        }
+            // hints
+            assert(new Hint("What level of aliasing does b have to a?"));
+            assert(new Hint("hint: b is "+listbtype+". Here, does the change to a affect this specific element in b?"));
+            assert(new Hint("Please write "+f+". Reflect: if a changed, did b change with a?"));
+            // model observable action
+	      if (checkSAI({selection: sel, action: "UpdateTextField", input: f})) {
+             modify(prob, "newb0", f);    // modify semantic representation
+	           modify(ie, "value", f);         // modify interface represention in WM
+                                            //(this does not change the interface itself!!)
+	           halt();                 // await next student action
+        }
+        else {
+            if (checkSAI({selection: sel, action: "UpdateTextField", input: z}, null, true)) {
+                setSuccessOrBugMsg("Are you sure you got the aliasing right?");
+            }
+            backtrack();             // undo any changes and search further
+	     }
+    }
+}
+
+rule listb1 {
+    when {
+        prob : Problem prob.newb1 == null
+            {lista1: n, ienewb1: sel};
+        ie : InterfaceElement ie.name == sel && ie.value == null;
+    }
+    then {
+        let f = n;
+        if (prob.ind == 1) {
+            if (listbtype !== "deepcopy") {
+                f = newval;
+            }
+        }
+        // hints
+        assert(new Hint("What level of aliasing does b have to a?"));
+        assert(new Hint("hint: b is "+listbtype+". Here, does the change to a affect this specific element in b?"));
+        assert(new Hint("Please write "+f+". Reflect: did b change with a?"));
+            // model observable action
+	      if (checkSAI({selection: sel, action: "UpdateTextField", input: f})) {
+             modify(prob, "newb1", f);    // modify semantic representation
+	           modify(ie, "value", f);         // modify interface represention in WM
+                                            //(this does not change the interface itself!!)
+	           halt();                 // await next student action
+        }
+        else {
+            if (checkSAI({selection: sel, action: "UpdateTextField", input: z}, null, true)) {
+                setSuccessOrBugMsg("Are you sure you got the aliasing right?");
+            }
+            backtrack();             // undo any changes and search further
+	     }
+    }
+}
+
+rule listb2 {
+    when {
+        prob : Problem prob.newb2 == null
+            {lista2: n, ienewb2: sel};
+        ie : InterfaceElement ie.name == sel && ie.value == null;
+    }
+    then {
+        let f = n;
+        if (prob.ind == 2) {
+            if (listbtype !== "deepcopy") {
+                f = newval;
+            }
+        }
+            // hints
+            assert(new Hint("What level of aliasing does b have to a?"));
+            assert(new Hint("hint: b is "+listbtype+". Here, does the change to a affect this specific element in b?"));
+            assert(new Hint("Please write "+f+". Reflect: did b change with a?"));
+            // model observable action
+	      if (checkSAI({selection: sel, action: "UpdateTextField", input: f})) {
+             modify(prob, "newb2", f);    // modify semantic representation
+	           modify(ie, "value", f);         // modify interface represention in WM
+                                            //(this does not change the interface itself!!)
+	           halt();                 // await next student action
+        }
+        else {
+            if (checkSAI({selection: sel, action: "UpdateTextField", input: z}, null, true)) {
+                setSuccessOrBugMsg("Are you sure you got the aliasing right?");
+            }
+            backtrack();             // undo any changes and search further
+	     }
+    }
+}
+
+rule clickDone {
+    when {
+        p: Problem (p.newb0 != null) && (p.newb1 != null) && (p.newb2 != null) && (p.newa0 != null) && (p.newa1 != null) && (p.newa2 != null)
+    }
+
+	then {
+		let predictedSAI = {
+			selection: "done",
+			action: "ButtonPressed",
+			input: "don't_care"
+		};
+		if (checkSAI(predictedSAI)) {
+			setSuccessOrBugMsg("You're done!");
+			halt();
+		}
+		else {
+			assert(new Hint("Click the done button."));
+			backtrack();
+		}
+	}
+}

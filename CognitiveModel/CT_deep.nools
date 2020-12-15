@@ -5,5 +5,6 @@ global listb = "copy.deepcopy(a)";
 global listbtype = "deepcopy";
 global nline = 'a[1] plusequals 5';
 global ind = 1;
-global newval = "40"
+global newval = "40";
+
 import("productionrules.nools");
