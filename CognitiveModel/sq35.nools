@@ -1,0 +1,9 @@
+global lista0 = "hello";
+global lista1 = "35";
+global lista2 = "[122]";
+global listb = "copy.deepcopy(a)";
+global listbtype = "deepcopy";
+global nline = 'a[1] plusequals 5';
+global ind = 1;
+global newval = "40"
+import("productionrules.nools");

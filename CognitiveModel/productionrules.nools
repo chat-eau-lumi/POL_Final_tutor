@@ -1,0 +1,113 @@
+import("types.nools");
+
+// If the argument is an integer, return it without the ones digit, else return null
+//
+function removeOnesDigit(n) {
+    return (Number.isInteger(n) ? Math.floor(n/10) : null);
+}
+
+// Return true if the 2 arguments are not equal.
+//
+function notEqual(m, n) {
+    return m != n;
+}
+
+
+// RULE bootstrap
+// Always fired at startup for initialization of working memory
+//
+rule bootstrap {
+    when {
+        s: Boolean s === false from false;
+    }
+    then {
+        console.log("bootstrap", lista0);
+
+        // create facts to represent the student interface components
+        let ga0 = assert(new InterfaceElement("givena0"));
+        let ga1 = assert(new InterfaceElement("givena1"));
+        let ga2 = assert(new InterfaceElement("givena2"));
+        let gb = assert(new InterfaceElement("givenb"));
+        let cl = assert(new InterfaceElement("test"));
+        let firstPart = assert(new InterfaceElement("firstPart"));
+        let firstPartPlus1 = assert(new InterfaceElement("firstPartPlusOne"));
+
+        // create the main Problem fact, with the given numberToSquare and the component names
+        assert(new Problem("problem", lista0, lista1, lista2, listbtype, ind, newval,
+            firstPart.name,
+            firstPartPlus1.name));
+
+        // write the numberToSquare to the proper student interface component
+        assert(new TPA(ga0.name, "UpdateTextField", lista0));
+        assert(new TPA(ga1.name, "UpdateTextField", lista1));
+        assert(new TPA(ga2.name, "UpdateTextField", lista2));
+        assert(new TPA(gb.name, "UpdateTextField", listb));
+        assert(new TPA(cl.name, "UpdateTextField", nline));
+
+        setProblemAttribute("use_backtracking", true);
+        halt();
+    }
+}
+
+rule findFirstPart {
+    when {
+        prob : Problem prob.firstPart == null
+            {lista0: n, ieFirstPart: sel};
+        ie : InterfaceElement ie.name == sel && ie.value == null;
+    }
+    then {
+            // compute the number with the 5 on the right "chopped off"
+        if (prob.ind == 1) {
+            let f = removeOnesDigit(n);
+        }
+            // hints
+        assert(new Hint("Start by removing the right-most digit from "+n+"."));
+        assert(new Hint("If you remove the right-most digit from "+n+", you have "+f+"."));
+        assert(new Hint("Please write "+f+"."));
+            // model observable action
+	      if (checkSAI({selection: sel, action: "UpdateTextField", input: f})) {
+             modify(prob, "firstPart", f);    // modify semantic representation
+	           modify(ie, "value", f);         // modify interface represention in WM
+                                            //(this does not change the interface itself!!)
+	           halt();                 // await next student action
+        }
+        else {
+            backtrack();             // undo any changes and search further
+	     }
+    }
+}
+
+// RULE addOne
+// IF
+//    there is a goal to determine the square of a number
+//    and we have split off the first part (call it f)
+//    and we have not added 1 to the first part
+//THEN
+//    Write (f + 1) as the first part plus 1
+
+rule addOne {
+  when {
+    p : Problem p.firstPart != null && p.firstPartPlus1 == null
+	      {firstPart: f, ieFirstPartPlus1: sel};
+    ie : InterfaceElement ie.name==sel && ie.value==null;    
+  }
+  then {
+            // do the actual adding of 1
+    let f1 = f + 1;
+            // hints
+    assert(new Hint("Next step: Add 1."));
+    assert(new Hint("If you add 1 to the previous number, "+f+", you have "+f1+"."));
+    assert(new Hint("Please write "+f1+"."));
+            // model observable action
+    if(checkSAI({selection: sel, action: "UpdateTextField", input: f1})) {
+        modify(p, "firstPartPlus1", f1);      // modify semantic representation
+        modify(ie, "value", f1);              // modify interface represention in WM
+                                            //(this does not change the interface itself!!)
+        halt();                 // await next student action
+    }
+    else {
+	     backtrack();             // undo any changes and search further
+	 }
+  }
+}
+

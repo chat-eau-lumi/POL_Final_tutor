@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>List Aliasing Tutor: Cotracing Problem</title>
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8">
+	<link rel="stylesheet" href="https://cdn.ctat.cs.cmu.edu/releases/latest/CTAT.min.css"/>
+	<link rel="stylesheet" href="Assets/css/final-style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="shortcut icon" href="">
+	<script src="https://cdn.ctat.cs.cmu.edu/releases/latest/jquery.min.js"></script>
+	<script src="https://cdn.ctat.cs.cmu.edu/releases/latest/ctat.min.js"></script>
+	<script src="https://cdn.ctat.cs.cmu.edu/releases/latest/ctatloader.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h2>A Cotracing Problem</h2>
+		<div class="CTATTextField" id="instructionText"></div>
+		<pre>
+		<div class="CTATTextField" id="problemText" data-ctat-tab-on-enter="true"></div>
+		</pre>
+		<br>
+		<div id="hint" class="CTATHintButton"></div>
+		<div id="hint" class="CTATHintWindow"></div>
+		<div id="skill" class="CTATSkillWindow"></div>
+		<br>
+		<div id="step1">
+		<h4>1. Let's begin by setting up working memory.</h4>
+			<table>
+				<tr>
+					<th>These lists</th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th>point to this</th>
+				</tr>
+				<tr>
+					<td>a</td>
+					<td>and</td>
+					<td class="CTATTextInput" id="step1List12"></td>
+					<td>---></td>
+					<td class="CTATTextField" id="step1Alias"></td>
+				</tr>
+				<tr>
+					<td class="CTATTextInput" id="step1List21"></td>
+					<td>and</td>
+					<td class="CTATTextInput" id="step1List22"></td>
+					<td>---></td>
+					<td><img src="Assets/arrows.PNG" width="150" height="30"></td>
+				</tr>
+				<tr>
+					<td class="CTATTextInput" id="step1List31"></td>
+					<td>and</td>
+					<td class="CTATTextInput" id="step1List32"></td>
+					<td>---></td>
+					<td class="CTATTextField" id="step1Deep"></td>
+				</tr>
+			</table>
+		</div>
+		<br>
+		<div id="step2">
+			<h4>2. Identify memory relationships.</h4>
+			<table>
+				<tr>
+					<td>b is a</td>
+					<td class="CTATComboBox" id="step2ID1" data-ctat-labels="---, Alias, Shallow Copy, Deep Copy"></td>
+					<td>of <div class="CTATTextInput" id="step2Array1"></div></td>
+				</tr>
+				<tr>
+					<td>c is a</td>
+					<td class="CTATComboBox" id="step2ID2" data-ctat-labels="---, Alias, Shallow Copy, Deep Copy"></td>
+					<td>of <div class="CTATTextInput" id="step2Array2"></div></td>
+				</tr>
+				<tr>
+					<td>d is a</td>
+					<td class="CTATComboBox" id="step2ID3" data-ctat-labels="---, Alias, Shallow Copy, Deep Copy"></td>
+					<td>of <div class="CTATTextInput" id="step2Array3"></div></td>
+				</tr>
+			</table>
+		</div>
+		<br>
+		<div id="step3Line4Part1">
+			<h4>3. Cotrace</h4>
+			<h6>After line 4, which list(s) have changed? (ex. if a, b, and d have changed, answer abd)</h6>
+			<div class="CTATTextInput" id="step3Line4Changed"></div>
+		</div>
+	
+
+		<div id="step3Line4Part2">
+			<h6>For the selected lines, enter their new values.</h6>
+			<div class="CTATTextField" id="step3Line4Label1"></div>
+			<div class="CTATTextInput" id="step3Line4Value11"></div>
+			<div class="CTATTextInput" id="step3Line4Value12"></div>
+			<div class="CTATTextInput" id="step3Line4Value13"></div>
+			<div class="CTATTextInput" id="step3Line4Value14"></div>
+			<br>
+			<div class="CTATTextField" id="step3Line4Label2"></div>
+			<div class="CTATTextInput" id="step3Line4Value21"></div>
+			<div class="CTATTextInput" id="step3Line4Value22"></div>
+			<div class="CTATTextInput" id="step3Line4Value23"></div>
+			<div class="CTATTextInput" id="step3Line4Value24"></div>
+			<br>
+			<div class="CTATTextField" id="step3Line4Label3"></div>
+			<div class="CTATTextInput" id="step3Line4Value31"></div>
+			<div class="CTATTextInput" id="step3Line4Value32"></div>
+			<div class="CTATTextInput" id="step3Line4Value33"></div>
+			<div class="CTATTextInput" id="step3Line4Value34"></div>
+		</div>
+		<div id="step3Line5Part1">
+			<h6>After line 5, which list(s) have changed? (ex. if a, b, and d have changed, answer abd)</h6>
+			<div class="CTATTextInput" id="step3Line5Changed"></div>
+		</div>
+		<div id="step3Line5Part2">
+			<h6>For the selected lines, enter their new values.</h6>
+			first = 
+			<div class="CTATTextField" id="step3Line5Label1"></div>
+			<div class="CTATTextInput" id="step3Line5Value11"></div>
+			<div class="CTATTextInput" id="step3Line5Value12"></div>
+			<div class="CTATTextInput" id="step3Line5Value13"></div>
+			<div class="CTATTextInput" id="step3Line5Value14"></div>
+			<br>
+			second = 
+			<div class="CTATTextField" id="step3Line5Label2"></div>
+			<div class="CTATTextInput" id="step3Line5Value21"></div>
+			<div class="CTATTextInput" id="step3Line5Value22"></div>
+			<div class="CTATTextInput" id="step3Line5Value23"></div>
+			<div class="CTATTextInput" id="step3Line5Value24"></div>
+			<br>
+			third = 
+			<div class="CTATTextField" id="step3Line5Label3"></div>
+			<div class="CTATTextInput" id="step3Line5Value31"></div>
+			<div class="CTATTextInput" id="step3Line5Value32"></div>
+			<div class="CTATTextInput" id="step3Line5Value33"></div>
+			<div class="CTATTextInput" id="step3Line5Value34"></div>
+		</div>
+		<div id="step3Line6Part1">
+			<h6>After line 6, which list(s) have changed? (ex. if a, b, and d have changed, answer abd)</h6>
+			<div class="CTATTextInput" id="step3Line6Changed"></div>
+		</div>
+		<div id="step3Line6Part2">
+			<h6>For the selected lines, enter their new values.</h6>
+			first = 
+			<div class="CTATTextField" id="step3Line6Label1"></div>
+			<div class="CTATTextInput" id="step3Line6Value11"></div>
+			<div class="CTATTextInput" id="step3Line6Value12"></div>
+			<div class="CTATTextInput" id="step3Line6Value13"></div>
+			<div class="CTATTextInput" id="step3Line6Value14"></div>
+			<br>
+			second = 
+			<div class="CTATTextField" id="step3Line6Label2"></div>
+			<div class="CTATTextInput" id="step3Line6Value21"></div>
+			<div class="CTATTextInput" id="step3Line6Value22"></div>
+			<div class="CTATTextInput" id="step3Line6Value23"></div>
+			<div class="CTATTextInput" id="step3Line6Value24"></div>
+			<br>
+			third = 
+			<div class="CTATTextField" id="step3Line6Label3"></div>
+			<div class="CTATTextInput" id="step3Line6Value31"></div>
+			<div class="CTATTextInput" id="step3Line6Value32"></div>
+			<div class="CTATTextInput" id="step3Line6Value33"></div>
+			<div class="CTATTextInput" id="step3Line6Value34"></div>
+		</div>
+		<div id="step3Line7Part1">
+			<h6>After line 7, which list(s) have changed? (ex. if a, b, and d have changed, answer abd)</h6>
+			<div class="CTATTextInput" id="step3Line7Changed"></div>
+		</div>
+		<div id="step3Line7Part2">
+			<h6>For the selected lines, enter their new values.</h6>
+			first = 
+			<div class="CTATTextField" id="step3Line7Label1"></div>
+			<div class="CTATTextInput" id="step3Line7Value11"></div>
+			<div class="CTATTextInput" id="step3Line7Value12"></div>
+			<div class="CTATTextInput" id="step3Line7Value13"></div>
+			<div class="CTATTextInput" id="step3Line7Value14"></div>
+			<br>
+			second = 
+			<div class="CTATTextField" id="step3Line7Label2"></div>
+			<div class="CTATTextInput" id="step3Line7Value21"></div>
+			<div class="CTATTextInput" id="step3Line7Value22"></div>
+			<div class="CTATTextInput" id="step3Line7Value23"></div>
+			<div class="CTATTextInput" id="step3Line7Value24"></div>
+			<br>
+			third = 
+			<div class="CTATTextField" id="step3Line7Label3"></div>
+			<div class="CTATTextInput" id="step3Line7Value31"></div>
+			<div class="CTATTextInput" id="step3Line7Value32"></div>
+			<div class="CTATTextInput" id="step3Line7Value33"></div>
+			<div class="CTATTextInput" id="step3Line7Value34"></div>
+		</div>
+		<br>
+		<div id="step4">
+			<h4>4. What does the function return?</h4>
+			<div class="CTATTextInput" id="step4Answer"></div>
+		</div>	
+		<br>
+		<div id="step5">
+			<h4>5. After the function returns, what is the value of a?</h4>
+			<div class="CTATTextInput" id="step5Answer"></div>
+		</div>	
+		<br>
+		<div id="step6">
+			<h4>6. Input the order of how the elements are printed out.</h4>
+			<table>
+				<tr>
+					<td class="CTATTextInput" id="step6Selection1"></td>
+					<td class="CTATTextField" id="step6List1" ></td>
+					<td>placeholder text</td>
+				</tr>
+				<tr>
+					<td class="CTATTextInput" id="step6Selection2"></td>
+					<td class="CTATTextField" id="step6List2" ></td>
+					<td>placeholder text</td>
+				</tr>
+				<tr>
+					<td class="CTATTextInput" id="step6Selection3"></td>
+					<td class="CTATTextField" id="step6List3" ></td>
+					<td>placeholder text</td>
+				</tr>
+				<tr>
+					<td class="CTATTextInput" id="step6Selection4"></td>
+					<td class="CTATTextField" id="step6List4" ></td>
+					<td>placeholder text</td>
+				</tr>
+				<tr>
+					<td class="CTATTextInput" id="step6Selection5"></td>
+					<td class="CTATTextField" id="step6List5" ></td>
+					<td>placeholder text</td>
+				</tr>
+				<tr>
+					<td class="CTATTextInput" id="step6Selection6"></td>
+					<td class="CTATTextField" id="step6List6" ></td>
+					<td>placeholder text</td>
+				</tr>
+			</table>	
+			<div id="done" class="CTATDoneButton"></div>		
+		</div>	
+	</div>
+	<script src="Assets/js/script.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

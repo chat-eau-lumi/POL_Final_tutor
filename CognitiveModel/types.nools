@@ -1,0 +1,89 @@
+// Types for facts in your model.
+
+
+// InterfaceElement facts are usually of the form {name, value}, where
+//   the name is the selection from the student's selection-action-input, and
+//   the value is student's input
+define InterfaceElement {
+    name: null,
+	value: null,
+	constructor: function(n) {
+		this.name = n;
+	}
+}
+
+// The top-level fact with the problem-specific given values and
+// the names of the interface elements.
+define Problem {
+	name: null,
+	lista0: null,
+	lista1: null,
+	lista2: null,
+	listbt: null,
+	ind: null,
+	newval: null,
+	firstPart: null,
+	firstPartPlus1: null,
+	product: null,
+	append25: null,
+	finalAnswer: null,
+	printed: null,
+	ieFirstPart: null,
+	ieFirstPartPlus1: null,
+	constructor: function(name, lista0, lista1, lista2, listbtype, ind, newval, firstPart, firstPartPlus1) {
+		this.name = name;
+		this.lista0 = lista0;
+		this.lista1 = lista1;
+		this.lista2 = lista2;
+		this.listbt = listbtype;
+		this.ind = ind;
+		this.newval = newval;
+		this.ieFirstPart = firstPart;
+		this.ieFirstPartPlus1 = firstPartPlus1;
+	}
+}
+
+
+// The following are standard types needed for the Nools model tracer.
+// We recommend not changing these types.
+// The StudentValues, TPA and Hint facts are the same for every tutor.
+
+// The student's entries from the interface.
+define StudentValues {
+	selection: null,
+	action: null,
+	input: null,
+	constructor: function(s,a,i) {
+		this.selection = s;
+		this.action = a;
+		this.input = i;
+	}
+}
+
+// Assert a TPA fact to set a value in a component on the student interface.
+define TPA {
+	selection: null,
+	action: null,
+	input: null,
+	constructor: function(s, a, i) {
+		if(Array.isArray(s)) {
+			this.selection = s[0];
+			this.action = s[1];
+			this.input = s[2];
+		} else {
+			this.selection = s;
+			this.action = a;
+			this.input = i;
+		}
+	}
+}
+
+// Assert a Hint fact for each hint you want in a step.
+define Hint {
+	precedence: 0,
+	msg: "",
+	constructor: function(m, optPrecedence) {
+		this.msg = m;
+		this.precedence = optPrecedence || 0;
+	}
+}
