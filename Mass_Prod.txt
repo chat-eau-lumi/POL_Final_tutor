@@ -1,0 +1,81 @@
+Problem Name	Problem1
+%(startStateNodeName)%	b_start
+%(element1)%	goodbye(2)
+%(element2)%	"['hello', [15], [2, 1, 0]]"
+%(element3)%	"['hello', [15]]"
+%(element4)%	"[2, 1, 0]"
+%(element5)%	goodbye
+%(element6)%	"['goodbye', [2, 1, 3], [2, 1, 0], [2, 1, 3]]"
+%(problemtext)% NA
+%(a)%	"[""hello"", [15], [2, 1, 3]]"
+%(s1r1c2)%	d
+%(s1r2c1)%	b
+%(s1r2c2)%	NA
+%(s1r3c1)%	c
+%(s1r3c2)%	NA
+%(b_relation)%	Shallow Copy
+%(c_relation)%	Deep Copy
+%(d_relation)%	Alias
+%(b_rel_list)%	a 
+%(c_rel_list)%	a 
+%(d_rel_list)%	a 
+%(line_4)%	ad
+%(line_4_1)%	"""goodbye"""
+%(line_4_2)%	[15]
+%(line_4_3)%	"[2, 1, 3]"
+%(line_4_4)%	NA
+%(line_4_5)%	"""goodbye"""
+%(line_4_6)%	[15]
+%(line_4_7)%	"[2, 1, 3]"
+%(line_4_8)%	NA
+%(line_4_9)%	NA
+%(line_4_10)%	NA
+%(line_4_11)%	NA
+%(line_4_12)%	NA
+%(line_5)%	abd
+%(line_5_1)%	"""goodbye"""
+%(line_5_2)%	[15]
+%(line_5_3)%	"[2, 1, 0]"
+%(line_5_4)%	NA
+%(line_5_5)%	"""hello"""
+%(line_5_6)%	[15]
+%(line_5_7)%	"[2, 1, 0]"
+%(line_5_8)%	NA
+%(line_5_9)%	"""goodbye"""
+%(line_5_10)%	[15]
+%(line_5_11)%	"[2, 1, 0]"
+%(line_5_12)%	NA
+%(line_6)%	ad
+%(line_6_1)%	"""goodbye"""
+%(line_6_2)%	"[2, 1, 3]"
+%(line_6_3)%	"[2, 1, 0]"
+%(line_6_4)%	NA
+%(line_6_5)%	"""goodbye"""
+%(line_6_6)%	"[2, 1, 3]"
+%(line_6_7)%	"[2, 1, 0]"
+%(line_6_8)%	NA
+%(line_6_9)%	NA
+%(line_6_10)%	NA
+%(line_6_11)%	NA
+%(line_6_12)%	NA
+%(line_7)%	acd
+%(line_7_1)%	"""goodbye"""
+%(line_7_2)%	"[2, 1, 3]"
+%(line_7_3)%	"[2, 1, 0]"
+%(line_7_4)%	"[2, 1, 3]"
+%(line_7_5)%	"""hello"""
+%(line_7_6)%	[15]
+%(line_7_7)%	NA
+%(line_7_8)%	NA
+%(line_7_9)%	"""goodbye"""
+%(line_7_10)%	"[2, 1, 3]"
+%(line_7_11)%	"[2, 1, 0]"
+%(line_7_12)%	"[2, 1, 3]"
+%(function_return)%	"[['hello', [15], [2, 1, 0]], ['hello', [15]]]"
+%(value_of_a)%	"['goodbye', [2, 1, 3], [2, 1, 0], [2, 1, 3]]"
+%(element1_num)%	5
+%(element2_num)%	3
+%(element3_num)%	4
+%(element4_num)%	6
+%(element5_num)%	1
+%(element6_num)%	2

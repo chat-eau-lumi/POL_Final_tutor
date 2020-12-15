@@ -32,6 +32,7 @@ function showCodingField371() {
 
 function showCodingField372() {
 	$("#step3Line7Part2").show();
+	$("#step4").show();
 }
 
 function showCodingField4() {

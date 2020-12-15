@@ -1,12 +1,12 @@
 <?xml version="1.0" standalone="yes"?>
 
-<stateGraph firstCheckAllStates="true" caseInsensitive="true" unordered="false" lockWidget="true" hintPolicy="Use Both Kinds of Bias" version="4.0" suppressStudentFeedback="Show All Feedback" highlightRightSelection="true" startStateNodeName="%(startStateNodeName)%" tutorType="Example-tracing Tutor">
+<stateGraph firstCheckAllStates="true" caseInsensitive="true" unordered="false" lockWidget="true" hintPolicy="Use Both Kinds of Bias" version="4.0" suppressStudentFeedback="Show All Feedback" highlightRightSelection="true" startStateNodeName="b_start" tutorType="Example-tracing Tutor">
     <startNodeMessages>
         <message>
             <verb>SendNoteProperty</verb>
             <properties>
                 <MessageType>StartProblem</MessageType>
-                <ProblemName>Q1_Start</ProblemName>
+                <ProblemName>Problem1</ProblemName>
             </properties>
         </message>
         <message>
@@ -21,7 +21,7 @@
                     <value>UpdateTextField</value>
                 </Action>
                 <Input>
-                    <value>%(element1)%</value>
+                    <value>goodbye(2)</value>
                 </Input>
             </properties>
         </message>
@@ -37,7 +37,7 @@
                     <value>UpdateTextField</value>
                 </Action>
                 <Input>
-                    <value>%(element2)%</value>
+                    <value>['hello', [15], [2, 1, 0]]</value>
                 </Input>
             </properties>
         </message>
@@ -53,7 +53,7 @@
                     <value>UpdateTextField</value>
                 </Action>
                 <Input>
-                    <value>%(element3)%</value>
+                    <value>['hello', [15]]</value>
                 </Input>
             </properties>
         </message>
@@ -69,7 +69,7 @@
                     <value>UpdateTextField</value>
                 </Action>
                 <Input>
-                    <value>%(element4)%</value>
+                    <value>[2, 1, 0]</value>
                 </Input>
             </properties>
         </message>
@@ -85,7 +85,7 @@
                     <value>UpdateTextField</value>
                 </Action>
                 <Input>
-                    <value>%(element5)%</value>
+                    <value>goodbye</value>
                 </Input>
             </properties>
         </message>
@@ -101,7 +101,7 @@
                     <value>UpdateTextField</value>
                 </Action>
                 <Input>
-                    <value>%(element6)%</value>
+                    <value>['goodbye', [2, 1, 3], [2, 1, 0], [2, 1, 3]]</value>
                 </Input>
             </properties>
         </message>
@@ -113,7 +113,7 @@
         </message>
     </startNodeMessages>
     <node locked="false" doneState="false">
-        <text>Q1_Start</text>
+        <text>Problem1</text>
         <uniqueID>1</uniqueID>
         <dimension>
             <x>300</x>
@@ -997,7 +997,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(a)%</matcherParameter>
+                        <matcherParameter name="single">[&quot;hello&quot;, [15], [2, 1, 3]]</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Tutor (unevaluated)</Actor>
@@ -1029,7 +1029,7 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(a)%</value>
+                        <value>[&quot;hello&quot;, [15], [2, 1, 3]]</value>
                     </Input>
                     <transaction_id>4dc31a18-b08a-09bb-4cfc-662ce6e214b1</transaction_id>
                 </properties>
@@ -1057,7 +1057,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(a)%</matcherParameter>
+                        <matcherParameter name="single">[&quot;hello&quot;, [15], [2, 1, 3]]</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Tutor (unevaluated)</Actor>
@@ -1150,13 +1150,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(s1r1c2)%</value>
+                        <value>d</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(s1r1c2)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter 'd' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -1177,7 +1177,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(s1r1c2)%</matcherParameter>
+                        <matcherParameter name="single">d</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -1210,13 +1210,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(s1r2c1)%</value>
+                        <value>b</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(s1r2c1)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter 'b' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -1237,7 +1237,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(s1r2c1)%</matcherParameter>
+                        <matcherParameter name="single">b</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -1270,13 +1270,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(s1r2c2)%</value>
+                        <value>NA</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(s1r2c2)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter 'NA' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -1297,7 +1297,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(s1r2c2)%</matcherParameter>
+                        <matcherParameter name="single">NA</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -1330,13 +1330,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(s1r3c1)%</value>
+                        <value>c</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(s1r3c1)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter 'c' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -1357,7 +1357,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(s1r3c1)%</matcherParameter>
+                        <matcherParameter name="single">c</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -1390,13 +1390,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(s1r3c2)%</value>
+                        <value>NA</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(s1r3c2)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter 'NA' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -1417,7 +1417,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(s1r3c2)%</matcherParameter>
+                        <matcherParameter name="single">NA</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -1510,7 +1510,7 @@
                         <value>UpdateComboBox</value>
                     </Action>
                     <Input>
-                        <value>%(b_relation)%</value>
+                        <value>Shallow Copy</value>
                     </Input>
                 </properties>
             </message>
@@ -1537,7 +1537,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(b_relation)%</matcherParameter>
+                        <matcherParameter name="single">Shallow Copy</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -1570,7 +1570,7 @@
                         <value>UpdateComboBox</value>
                     </Action>
                     <Input>
-                        <value>%(c_relation)%</value>
+                        <value>Deep Copy</value>
                     </Input>
                 </properties>
             </message>
@@ -1597,7 +1597,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(c_relation)%</matcherParameter>
+                        <matcherParameter name="single">Deep Copy</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -1630,7 +1630,7 @@
                         <value>UpdateComboBox</value>
                     </Action>
                     <Input>
-                        <value>%(d_relation)%</value>
+                        <value>Alias</value>
                     </Input>
                 </properties>
             </message>
@@ -1657,7 +1657,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(d_relation)%</matcherParameter>
+                        <matcherParameter name="single">Alias</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -1690,13 +1690,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(b_rel_list)%</value>
+                        <value>a </value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(b_rel_list)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter 'a ' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -1717,7 +1717,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(b_rel_list)%</matcherParameter>
+                        <matcherParameter name="single">a </matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -1750,13 +1750,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(c_rel_list)%</value>
+                        <value>a </value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(c_rel_list)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter 'a ' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -1777,7 +1777,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(c_rel_list)%</matcherParameter>
+                        <matcherParameter name="single">a </matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -1810,13 +1810,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(d_rel_list)%</value>
+                        <value>a </value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(d_rel_list)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter 'a ' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -1837,7 +1837,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(d_rel_list)%</matcherParameter>
+                        <matcherParameter name="single">a </matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -1990,13 +1990,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_4)%</value>
+                        <value>ad</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_4)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter 'ad' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -2017,7 +2017,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_4)%</matcherParameter>
+                        <matcherParameter name="single">ad</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -2050,13 +2050,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_4_1)%</value>
+                        <value>&quot;goodbye&quot;</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_4_1)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '&quot;goodbye&quot;' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -2077,7 +2077,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_4_1)%</matcherParameter>
+                        <matcherParameter name="single">&quot;goodbye&quot;</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -2110,13 +2110,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_4_2)%</value>
+                        <value>[15]</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_4_2)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '[15]' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -2137,7 +2137,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_4_2)%</matcherParameter>
+                        <matcherParameter name="single">[15]</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -2170,13 +2170,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_4_3)%</value>
+                        <value>[2, 1, 3]</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_4_3)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '[2, 1, 3]' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -2197,7 +2197,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_4_3)%</matcherParameter>
+                        <matcherParameter name="single">[2, 1, 3]</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -2230,13 +2230,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_4_4)%</value>
+                        <value>NA</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_4_4)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter 'NA' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -2257,7 +2257,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_4_4)%</matcherParameter>
+                        <matcherParameter name="single">NA</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -2290,13 +2290,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_4_5)%</value>
+                        <value>&quot;goodbye&quot;</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_4_5)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '&quot;goodbye&quot;' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -2317,7 +2317,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_4_5)%</matcherParameter>
+                        <matcherParameter name="single">&quot;goodbye&quot;</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -2350,13 +2350,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_4_6)%</value>
+                        <value>[15]</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_4_6)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '[15]' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -2377,7 +2377,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_4_6)%</matcherParameter>
+                        <matcherParameter name="single">[15]</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -2410,13 +2410,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_4_7)%</value>
+                        <value>[2, 1, 3]</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_4_7)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '[2, 1, 3]' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -2437,7 +2437,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_4_7)%</matcherParameter>
+                        <matcherParameter name="single">[2, 1, 3]</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -2470,13 +2470,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_4_8)%</value>
+                        <value>NA</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_4_8)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter 'NA' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -2497,7 +2497,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_4_8)%</matcherParameter>
+                        <matcherParameter name="single">NA</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -2530,13 +2530,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_4_9)%</value>
+                        <value>NA</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_4_9)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter 'NA' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -2557,7 +2557,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_4_9)%</matcherParameter>
+                        <matcherParameter name="single">NA</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -2590,13 +2590,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_4_10)%</value>
+                        <value>NA</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_4_10)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter 'NA' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -2617,7 +2617,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_4_10)%</matcherParameter>
+                        <matcherParameter name="single">NA</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -2650,13 +2650,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_4_11)%</value>
+                        <value>NA</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_4_11)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter 'NA' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -2677,7 +2677,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_4_11)%</matcherParameter>
+                        <matcherParameter name="single">NA</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -2771,13 +2771,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_4_12)%</value>
+                        <value>NA</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_4_12)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter 'NA' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -2798,7 +2798,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_4_12)%</matcherParameter>
+                        <matcherParameter name="single">NA</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -2891,13 +2891,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_5)%</value>
+                        <value>abd</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_5)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter 'abd' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -2918,7 +2918,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_5)%</matcherParameter>
+                        <matcherParameter name="single">abd</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -2951,13 +2951,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_5_1)%</value>
+                        <value>&quot;goodbye&quot;</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_5_1)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '&quot;goodbye&quot;' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -2978,7 +2978,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_5_1)%</matcherParameter>
+                        <matcherParameter name="single">&quot;goodbye&quot;</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -3011,13 +3011,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_5_2)%</value>
+                        <value>[15]</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_5_2)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '[15]' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -3038,7 +3038,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_5_2)%</matcherParameter>
+                        <matcherParameter name="single">[15]</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -3071,13 +3071,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_5_3)%</value>
+                        <value>[2, 1, 0]</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_5_3)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '[2, 1, 0]' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -3098,7 +3098,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_5_3)%</matcherParameter>
+                        <matcherParameter name="single">[2, 1, 0]</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -3131,13 +3131,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_5_4)%</value>
+                        <value>NA</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_5_4)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter 'NA' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -3158,7 +3158,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_5_4)%</matcherParameter>
+                        <matcherParameter name="single">NA</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -3191,13 +3191,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_5_5)%</value>
+                        <value>&quot;hello&quot;</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_5_5)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '&quot;hello&quot;' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -3218,7 +3218,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_5_5)%</matcherParameter>
+                        <matcherParameter name="single">&quot;hello&quot;</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -3251,13 +3251,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_5_6)%</value>
+                        <value>[15]</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_5_6)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '[15]' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -3278,7 +3278,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_5_6)%</matcherParameter>
+                        <matcherParameter name="single">[15]</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -3311,13 +3311,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_5_7)%</value>
+                        <value>[2, 1, 0]</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_5_7)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '[2, 1, 0]' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -3338,7 +3338,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_5_7)%</matcherParameter>
+                        <matcherParameter name="single">[2, 1, 0]</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -3371,13 +3371,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_5_8)%</value>
+                        <value>NA</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_5_8)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter 'NA' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -3398,7 +3398,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_5_8)%</matcherParameter>
+                        <matcherParameter name="single">NA</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -3431,13 +3431,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_5_9)%</value>
+                        <value>&quot;goodbye&quot;</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_5_9)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '&quot;goodbye&quot;' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -3458,7 +3458,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_5_9)%</matcherParameter>
+                        <matcherParameter name="single">&quot;goodbye&quot;</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -3491,13 +3491,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_5_10)%</value>
+                        <value>[15]</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_5_10)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '[15]' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -3518,7 +3518,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_5_10)%</matcherParameter>
+                        <matcherParameter name="single">[15]</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -3551,13 +3551,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_5_11)%</value>
+                        <value>[2, 1, 0]</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_5_11)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '[2, 1, 0]' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -3578,7 +3578,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_5_11)%</matcherParameter>
+                        <matcherParameter name="single">[2, 1, 0]</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -3671,13 +3671,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_5_12)%</value>
+                        <value>NA</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_5_12)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter 'NA' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -3698,7 +3698,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_5_12)%</matcherParameter>
+                        <matcherParameter name="single">NA</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -3791,13 +3791,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_6)%</value>
+                        <value>ad</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_6)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter 'ad' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -3818,7 +3818,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_6)%</matcherParameter>
+                        <matcherParameter name="single">ad</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -3851,13 +3851,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_6_1)%</value>
+                        <value>&quot;goodbye&quot;</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_6_1)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '&quot;goodbye&quot;' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -3878,7 +3878,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_6_1)%</matcherParameter>
+                        <matcherParameter name="single">&quot;goodbye&quot;</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -3911,13 +3911,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_6_2)%</value>
+                        <value>[2, 1, 3]</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_6_2)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '[2, 1, 3]' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -3938,7 +3938,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_6_2)%</matcherParameter>
+                        <matcherParameter name="single">[2, 1, 3]</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -3971,13 +3971,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_6_3)%</value>
+                        <value>[2, 1, 0]</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_6_3)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '[2, 1, 0]' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -3998,7 +3998,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_6_3)%</matcherParameter>
+                        <matcherParameter name="single">[2, 1, 0]</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -4031,13 +4031,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_6_4)%</value>
+                        <value>NA</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_6_4)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter 'NA' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -4058,7 +4058,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_6_4)%</matcherParameter>
+                        <matcherParameter name="single">NA</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -4091,13 +4091,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_6_5)%</value>
+                        <value>&quot;goodbye&quot;</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_6_5)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '&quot;goodbye&quot;' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -4118,7 +4118,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_6_5)%</matcherParameter>
+                        <matcherParameter name="single">&quot;goodbye&quot;</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -4151,13 +4151,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_6_6)%</value>
+                        <value>[2, 1, 3]</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_6_6)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '[2, 1, 3]' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -4178,7 +4178,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_6_6)%</matcherParameter>
+                        <matcherParameter name="single">[2, 1, 3]</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -4211,13 +4211,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_6_7)%</value>
+                        <value>[2, 1, 0]</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_6_7)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '[2, 1, 0]' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -4238,7 +4238,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_6_7)%</matcherParameter>
+                        <matcherParameter name="single">[2, 1, 0]</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -4271,13 +4271,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_6_8)%</value>
+                        <value>NA</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_6_8)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter 'NA' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -4298,7 +4298,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_6_8)%</matcherParameter>
+                        <matcherParameter name="single">NA</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -4331,13 +4331,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_6_9)%</value>
+                        <value>NA</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_6_9)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter 'NA' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -4358,7 +4358,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_6_9)%</matcherParameter>
+                        <matcherParameter name="single">NA</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -4391,13 +4391,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_6_10)%</value>
+                        <value>NA</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_6_10)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter 'NA' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -4418,7 +4418,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_6_10)%</matcherParameter>
+                        <matcherParameter name="single">NA</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -4451,13 +4451,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_6_11)%</value>
+                        <value>NA</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_6_11)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter 'NA' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -4478,7 +4478,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_6_11)%</matcherParameter>
+                        <matcherParameter name="single">NA</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -4571,13 +4571,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_6_12)%</value>
+                        <value>NA</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_6_12)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter 'NA' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -4598,7 +4598,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_6_12)%</matcherParameter>
+                        <matcherParameter name="single">NA</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -4691,13 +4691,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_7)%</value>
+                        <value>acd</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_7)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter 'acd' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -4718,7 +4718,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_7)%</matcherParameter>
+                        <matcherParameter name="single">acd</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -4751,13 +4751,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_7_1)%</value>
+                        <value>&quot;goodbye&quot;</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_7_1)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '&quot;goodbye&quot;' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -4778,7 +4778,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_7_1)%</matcherParameter>
+                        <matcherParameter name="single">&quot;goodbye&quot;</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -4811,13 +4811,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_7_2)%</value>
+                        <value>[2, 1, 3]</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_7_2)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '[2, 1, 3]' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -4838,7 +4838,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_7_2)%</matcherParameter>
+                        <matcherParameter name="single">[2, 1, 3]</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -4871,13 +4871,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_7_3)%</value>
+                        <value>[2, 1, 0]</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_7_3)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '[2, 1, 0]' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -4898,7 +4898,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_7_3)%</matcherParameter>
+                        <matcherParameter name="single">[2, 1, 0]</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -4931,13 +4931,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_7_4)%</value>
+                        <value>[2, 1, 3]</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_7_4)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '[2, 1, 3]' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -4958,7 +4958,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_7_4)%</matcherParameter>
+                        <matcherParameter name="single">[2, 1, 3]</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -4991,13 +4991,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_7_5)%</value>
+                        <value>&quot;hello&quot;</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_7_5)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '&quot;hello&quot;' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -5018,7 +5018,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_7_5)%</matcherParameter>
+                        <matcherParameter name="single">&quot;hello&quot;</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -5051,13 +5051,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_7_6)%</value>
+                        <value>[15]</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_7_6)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '[15]' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -5078,7 +5078,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_7_6)%</matcherParameter>
+                        <matcherParameter name="single">[15]</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -5111,13 +5111,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_7_7)%</value>
+                        <value>NA</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_7_7)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter 'NA' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -5138,7 +5138,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_7_7)%</matcherParameter>
+                        <matcherParameter name="single">NA</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -5171,13 +5171,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_7_8)%</value>
+                        <value>NA</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_7_8)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter 'NA' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -5198,7 +5198,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_7_8)%</matcherParameter>
+                        <matcherParameter name="single">NA</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -5231,13 +5231,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_7_9)%</value>
+                        <value>&quot;goodbye&quot;</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_7_9)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '&quot;goodbye&quot;' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -5258,7 +5258,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_7_9)%</matcherParameter>
+                        <matcherParameter name="single">&quot;goodbye&quot;</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -5291,13 +5291,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_7_10)%</value>
+                        <value>[2, 1, 3]</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_7_10)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '[2, 1, 3]' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -5318,7 +5318,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_7_10)%</matcherParameter>
+                        <matcherParameter name="single">[2, 1, 3]</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -5351,13 +5351,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_7_11)%</value>
+                        <value>[2, 1, 0]</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_7_11)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '[2, 1, 0]' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -5378,7 +5378,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_7_11)%</matcherParameter>
+                        <matcherParameter name="single">[2, 1, 0]</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -5471,13 +5471,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(line_7_12)%</value>
+                        <value>[2, 1, 3]</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(line_7_12)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '[2, 1, 3]' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -5498,7 +5498,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(line_7_12)%</matcherParameter>
+                        <matcherParameter name="single">[2, 1, 3]</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -5591,13 +5591,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(function_return)%</value>
+                        <value>[['hello', [15], [2, 1, 0]], ['hello', [15]]]</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(function_return)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '[['hello', [15], [2, 1, 0]], ['hello', [15]]]' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -5618,7 +5618,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(function_return)%</matcherParameter>
+                        <matcherParameter name="single">[['hello', [15], [2, 1, 0]], ['hello', [15]]]</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -5711,13 +5711,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(value_of_a)%</value>
+                        <value>['goodbye', [2, 1, 3], [2, 1, 0], [2, 1, 3]]</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(value_of_a)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '['goodbye', [2, 1, 3], [2, 1, 0], [2, 1, 3]]' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -5738,7 +5738,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(value_of_a)%</matcherParameter>
+                        <matcherParameter name="single">['goodbye', [2, 1, 3], [2, 1, 0], [2, 1, 3]]</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -5771,13 +5771,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(element1_num)%</value>
+                        <value>5</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(element1_num)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '5' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -5798,7 +5798,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(element1_num)%</matcherParameter>
+                        <matcherParameter name="single">5</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -5831,13 +5831,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(element2_num)%</value>
+                        <value>3</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(element2_num)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '3' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -5858,7 +5858,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(element2_num)%</matcherParameter>
+                        <matcherParameter name="single">3</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -5891,13 +5891,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(element3_num)%</value>
+                        <value>4</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(element3_num)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '4' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -5918,7 +5918,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(element3_num)%</matcherParameter>
+                        <matcherParameter name="single">4</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -5951,13 +5951,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(element4_num)%</value>
+                        <value>6</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(element4_num)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '6' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -5978,7 +5978,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(element4_num)%</matcherParameter>
+                        <matcherParameter name="single">6</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -6011,13 +6011,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(element5_num)%</value>
+                        <value>1</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(element5_num)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '1' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -6038,7 +6038,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(element5_num)%</matcherParameter>
+                        <matcherParameter name="single">1</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -6071,13 +6071,13 @@
                         <value>UpdateTextField</value>
                     </Action>
                     <Input>
-                        <value>%(element6_num)%</value>
+                        <value>2</value>
                     </Input>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '%(element6_num)%' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '2' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -6098,7 +6098,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">%(element6_num)%</matcherParameter>
+                        <matcherParameter name="single">2</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
